@@ -1,7 +1,18 @@
 <script  setup >
-const mensaje = () => {
- console.log("Mensaje");
+const mensaje =  () => {
+ console.log("Diste click en la foto");
 }
+const props = defineProps({
+    name : {
+        type : String,
+        default : 'no name'
+    },
+    mail :{
+        type : String,
+        default : 'no mail'
+    }
+})
+
 </script>
 
 <template>
@@ -10,8 +21,8 @@ const mensaje = () => {
       <img src="https://img.freepik.com/foto-gratis/disparo-gran-angular-solo-arbol-que-crece-cielo-nublado-puesta-sol-rodeada-cesped_181624-22807.jpg" alt="">
    </div>
    <div class=" inline-block">
-      <h2 class="text-md font-semibold"> pepito perez</h2>
-      <p class=" text-xs leading-0 ">correo@mipagina.com</p>
+      <h2 class="text-md font-semibold"> {{ props.name }} </h2>
+      <p class=" text-xs leading-0 "> {{ props.mail }}</p>
    </div>
 </div>
 

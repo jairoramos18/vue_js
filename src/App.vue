@@ -1,5 +1,5 @@
 <script setup>
-import CardComponent from '@/components/cardComponent.vue';
+import CardComponent from '@/components/CardComponent.vue';
 
 const users = [ 
    {
@@ -21,7 +21,8 @@ const users = [
    hola mundo
 </h1>
 
-<CardComponent  v-for="(user,index) in users"  :key="index"/>
+<CardComponent v-for="(user,index) in users"  :key="index" :name="user.name" :mail ="user.mail"/>
+
 
 
 </template>
