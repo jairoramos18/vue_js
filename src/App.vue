@@ -21,7 +21,7 @@ const users = [
    hola mundo
 </h1>
 
-<CardComponent  v-for="user int users"  :key="usuario"/>
+<CardComponent  v-for="(user,index) in users"  :key="index"/>
 
 
 </template>
