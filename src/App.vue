@@ -25,6 +25,11 @@ const users = ref([
 <h1> 
    hola mundo
 </h1>
+<input type="text" v-model="name" placeholder="escriba tu nombre " class=" border rounded"><br><br>
+<input type="text" v-model="mail" placeholder="escriba su correo " class=" border rounded"><br><br>
+<button class=""></button>
+
+
 <div class=" space-y-8">
    <CardComponent v-for="(user,index) in users"  :key="index" :name="user.name" :mail ="user.mail"  @borrarTarjeta = "borrarTarjeta"/>
 
