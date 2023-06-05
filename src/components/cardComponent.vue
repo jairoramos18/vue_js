@@ -1,7 +1,13 @@
 <script  setup >
 const mensaje =  () => {
- console.log("Diste click en la foto");
+ console.log("mensaje");
 }
+const borrarTarjeta = (index) => {
+console.log('Borrar tarjeta',index);
+emit('borrarTarjeta' , index)
+ 
+}
+const emit = defineEmits(['borrarTarjeta'])
 const props = defineProps({
     name : {
         type : String,
@@ -10,7 +16,12 @@ const props = defineProps({
     mail :{
         type : String,
         default : 'no mail'
-    }
+    },
+    
+        index : {
+            type : Number
+        } 
+    
 })
 
 </script>
@@ -23,6 +34,9 @@ const props = defineProps({
    <div class=" inline-block">
       <h2 class="text-md font-semibold"> {{ props.name }} </h2>
       <p class=" text-xs leading-0 "> {{ props.mail }}</p>
+      <span class=" inline-block ml-4 bg-red-600  text-white rounded leading-0  py-0 px-2 m-2 hover:cursor-pointer hover:bg-red-700   " @click="Sevent =>borrarTarjeta(props,index)">
+        x
+      </span>
    </div>
 </div>
 
